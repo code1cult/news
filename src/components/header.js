@@ -1,12 +1,17 @@
 import React from 'react'
 import Helmet from 'react-helmet';
-
+import AdSense from 'react-adsense'
 
 const Header = (data) => {
     return (
         <div>
-
+ <AdSense.Google
+          client="ca-pub-2548259343015828"
+          slot="5153910610"
+          format="auto"
+        />
             <Helmet>
+            <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
                 <title>{data.title}</title>
                 <meta name="description" content={data.description} />
             </Helmet>
