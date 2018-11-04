@@ -6,7 +6,7 @@ exports.createPages = ({ graphql, boundActionCreators }) => {
   return new Promise((resolve, reject) => {
     graphql(`
     {
-        allPrismicBlogpost {
+      allPrismicNewspost {
           edges {
             node {
               id
@@ -33,7 +33,7 @@ exports.createPages = ({ graphql, boundActionCreators }) => {
     `
   ).then(result => {
       console.log(result)
-    result.data.allPrismicBlogpost.edges.forEach(({ node }) => {
+    result.data.allPrismicNewspost.edges.forEach(({ node }) => {
       createPage({
         path: `/${node.data.id}`,
         component: path.resolve(`./src/pages/page.js`),

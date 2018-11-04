@@ -10,7 +10,7 @@ const IndexPage = ({ data }) => {
 
   
 
-  let blog = data.allPrismicBlogpost.edges[0].node.data
+  let blog = data.allPrismicNewspost.edges[0].node.data
   debugger
   return (
     <div>
@@ -37,7 +37,7 @@ export default IndexPage
 
 export const query = graphql`
 query($productId: Int){
-  allPrismicBlogpost (filter:{data:{
+  allPrismicNewspost (filter:{data:{
     id:{eq: $productId}
   }}){
     edges {

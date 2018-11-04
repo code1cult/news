@@ -40,17 +40,16 @@ const IndexPage = ({ data }) => {
   return (
     <div>
       <Navigation  />
-      <Header title={'How to Lose Weight'} description={'Blog About How to Lose Weight'}  image={'https://images.pexels.com/photos/1332189/pexels-photo-1332189.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260'} />
+      <Header title={'Trending News'} description={'Latest Breaking News '}  image={'https://images.pexels.com/photos/261949/pexels-photo-261949.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260'} />
 
       <div className="container">
         <div className="row">
           <div className="col-lg-8 col-md-10 mx-auto">
 
-            {renderPosts(data.allPrismicBlogpost.edges)}
+            {renderPosts(data.allPrismicNewspost.edges)}
 
 
             <div className="clearfix">
-              {/* <a className="btn btn-primary float-right" href="#">Older Posts &rarr;</a> */}
             </div>
           </div>
         </div>
@@ -68,7 +67,7 @@ export default IndexPage
 
 export const query = graphql`
 {
-  allPrismicBlogpost {
+  allPrismicNewspost {
     edges {
       node {
         id
