@@ -10,19 +10,19 @@ let renderPosts = (array) => {
   return array.map((value, i) => {
     let title = value.node.data.title.text
     let url = value.node.data.id;
-    let description = value.node.data.description.text.split(' ',50).join(' ') + '...';
+    let description = value.node.data.description.text.split(' ', 50).join(' ') + '...';
 
-    
+
     return (
       <div>
         <div className="post-preview">
-          <Link to={'/'+url}>
+          <Link to={'/' + url}>
             <h2 className="post-title">
-            {title}
-                </h2>
+              {title}
+            </h2>
             <h3 className="post-subtitle">
-             {description}
-                </h3>
+              {description}
+            </h3>
           </Link>
         </div>
         <hr />
@@ -36,11 +36,10 @@ let renderPosts = (array) => {
 
 const IndexPage = ({ data }) => {
 
-  debugger
   return (
     <div>
-      <Navigation  />
-      <Header title={'Trending News'} description={'Latest Breaking News '}  image={'https://images.pexels.com/photos/261949/pexels-photo-261949.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260'} />
+      <Navigation />
+      <Header title={'Trending News'} description={'Latest Breaking News '} image={'https://images.pexels.com/photos/261949/pexels-photo-261949.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260'} />
 
       <div className="container">
         <div className="row">
@@ -54,7 +53,7 @@ const IndexPage = ({ data }) => {
           </div>
         </div>
       </div>
-      <Footer/>  
+      <Footer />
     </div>
 
 

@@ -8,25 +8,24 @@ import Footer from '../components/footer'
 
 const IndexPage = ({ data }) => {
 
-  
+
 
   let blog = data.allPrismicNewspost.edges[0].node.data
-  debugger
   return (
     <div>
       <Navigation />
-      <Header title={blog.title.text}  description={'How to Lose Weight'}  image={blog.image.url} />
+      <Header title={blog.title.text} description={'How to Lose Weight'} image={blog.image.url} />
       <article>
-      <div className="container">
-        <div className="row">
-          <div className="col-lg-8 col-md-10 mx-auto">
-          <div dangerouslySetInnerHTML={{ __html: blog.description.html }}/>
+        <div className="container">
+          <div className="row">
+            <div className="col-lg-8 col-md-10 mx-auto">
+              <div dangerouslySetInnerHTML={{ __html: blog.description.html }} />
+            </div>
           </div>
         </div>
-      </div>
-    </article>
+      </article>
 
-      <Footer/>  
+      <Footer />
     </div>
 
 
