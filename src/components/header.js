@@ -13,6 +13,7 @@ const Header = (data) => {
                 format="auto"
             />
             <Helmet>
+            <meta name="google-site-verification" content="nhP1DAMDbhzaxvNg1ITUGaOtdvZ2AyIwJQrCoOOo09Q" />
             <script>{hotJarString}</script>
                 <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
                 <title>{data.title}</title>
