@@ -53,6 +53,16 @@ module.exports = {
     // },
 
     {
+      resolve: 'gatsby-source-strapi',
+      options: {
+        apiURL: 'http://77c50d87.ngrok.io',
+        contentTypes: [
+          'Post'
+        ]
+      },
+    },
+
+    {
       resolve: 'gatsby-source-prismic',
       options: {
         repositoryName: 'blog-template',

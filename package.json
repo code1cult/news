@@ -15,6 +15,7 @@
     "gatsby-source-contentful": "^2.0.6",
     "gatsby-source-filesystem": "^2.0.4",
     "gatsby-source-prismic": "^2.1.0",
+    "gatsby-source-strapi": "0.0.5",
     "gatsby-transformer-remark": "^2.1.11",
     "gatsby-transformer-sharp": "^2.1.4",
     "react": "^16.5.1",

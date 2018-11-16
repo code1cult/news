@@ -10,21 +10,22 @@ let renderPosts = (array) => {
 
 
   return array.map((value, i) => {
-    let title = value.node.data.title.text
-    let url = value.node.data.id;
-    let description = value.node.data.description.text.split(' ', 50).join(' ') + '...';
+    // let title = value.node.data.title.text
+    // let url = value.node.data.id;
+    // let description = value.node.data.description.text.split(' ', 50).join(' ') + '...';
 
 
+    debugger
 
     return (
       <div>
         <div className="post-preview">
-          <Link to={'/' + url}>
+          <Link to={'/' }>
             <h2 className="post-title">
-              {title}
+             {value.node.title}
             </h2>
             <h3 className="post-subtitle">
-              {description}
+              {/* {description} */}
             </h3>
           </Link>
         </div>
@@ -48,7 +49,7 @@ const IndexPage = ({ data }) => {
         <div className="row">
           <div className="col-lg-8 col-md-10 mx-auto">
 
-            {renderPosts(data.allPrismicNewspost.edges)}
+            {renderPosts(data.allStrapiPost.edges)}
 
 
             <div className="clearfix">
@@ -68,30 +69,16 @@ export default IndexPage
 
 
 export const query = graphql`
-{
-  allPrismicNewspost {
-    edges {
-      node {
-        id
-        data {
-          id
-          title {
-            text
-            html
-          }
-          image {
-            alt
-            copyright
-            url
-          }
-          description {
-            text
-            html
-          }
-        }
-      }
-    }
-  }
+query {
+  allStrapiPost{
+   edges {
+     node {
+       id
+       title
+
+     }
+   }
+ }
 }
 
 

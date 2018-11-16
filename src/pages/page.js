@@ -8,9 +8,10 @@ import Footer from '../components/footer'
 
 const IndexPage = ({ data }) => {
 
+  debugger
 
 
-  let blog = data.allPrismicNewspost.edges[0].node.data
+  let blog = data.allStrapiPost.edges[0].node.data
   return (
     <div>
       <Navigation />
@@ -35,32 +36,16 @@ const IndexPage = ({ data }) => {
 export default IndexPage
 
 export const query = graphql`
-query($productId: Int){
-  allPrismicNewspost (filter:{data:{
-    id:{eq: $productId}
-  }}){
-    edges {
-      node  {
-        id
-        data  {
-          id
-          title {
-            text
-            html
-          }
-          image {
-            alt
-            copyright
-            url
-          }
-          description {
-            text
-            html
-          }
-        }
-      }
-    }
-  }
+query {
+  allStrapiPost{
+   edges {
+     node {
+       id
+       title
+
+     }
+   }
+ }
 }
 
 
