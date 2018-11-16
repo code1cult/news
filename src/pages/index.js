@@ -7,10 +7,13 @@ import Footer from '../components/footer'
 
 let renderPosts = (array) => {
 
+
+
   return array.map((value, i) => {
     let title = value.node.data.title.text
     let url = value.node.data.id;
     let description = value.node.data.description.text.split(' ', 50).join(' ') + '...';
+
 
 
     return (
